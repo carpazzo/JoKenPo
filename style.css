@@ -1,0 +1,93 @@
+  /* 
+
+    Description= CSS code for jokenpo mini game 
+    was a self made study case for practise.
+    Author: Dalton Ramiro
+    date: 22/07/2018
+    Language :html5, CSS3
+    Game Version = JokenPo v1.0
+
+    */
+
+body
+{
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    padding: 0px;
+}
+h1
+{
+    text-align: center;
+    background-color: rgb(63, 111, 167);
+    border: 1px solid black;
+    border-radius: 2em;
+    margin: 5px 100px 5px 100px;
+}
+p
+{
+    font-size: 23px;
+    color: rgb(253, 253, 253);
+    text-align: center;
+}
+li
+{
+    font-size: 23px;
+    color: rgb(223, 180, 180);
+    text-align: center;
+    list-style-type:none ;
+    
+}
+
+
+#wrapper
+{
+    background-color: rgb(0, 0, 0);
+    border-radius: 2em;
+    padding: 10px 0px 10px 0px;
+
+}
+#gamedisplay
+{
+    background-color: rgba(59, 49, 204, 0.452);
+    border: 2px solid black;
+    border-radius: 0.2em;
+    text-align: center;
+    font-size: 30px;
+    color: yellow;
+    margin: 0px 60px 0px 60px;
+
+}
+#gamescoredisplay
+{
+    background-color: rgb(93, 123, 223);
+    border: 1px solid black;
+    border-radius: 0.2em;
+    margin: 15px 65px 10px 65px ;
+    text-align: center;
+    font-size: 22px;
+
+}
+#computerscore
+{
+    color: black;
+}
+#playerscore
+{
+    color:black;
+}
+#btndisplay
+{
+    
+    text-align: center;
+    color: rgb(2, 2, 2);
+    font-size: 25px;
+} 
+
+#obs 
+{
+    display:none;
+    text-align: center;
+    color: rgb(163, 14, 9);
+    font-size: 25px;
+}
+

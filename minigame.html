@@ -1,0 +1,63 @@
+
+<!-- 
+Description= jokenpo mini game 
+was a self made study case for practise.
+Author: Dalton Ramiro
+date: 22/07/2018
+Language :html5, Javascript, css3
+Game Version = JokenPo v1.0 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    lin
+    <title>Jo Ken Po</title>
+</head>
+<body>  
+    <div id=wrapper>
+
+        <h1>Mini Game</h1>
+        <p>Simple rules : who score 10 points first is the winner!!!</p>
+        <ul>
+            <li>Stone > Scissors</li>
+            <li>Scissors > Paper</li>
+            <li>Paper > Stone</li>
+        </ul>
+        <div id="gamedisplay">
+                
+            <h3>Lets Play!</h3> 
+
+            <div id="resultdisplay">
+              <p>Make your choise!</p>  
+            </div>
+                
+            <p id="btndisplay">
+                <input type="button" id="stone" value="Stone">
+                <input type="button" id="paper" value="Paper">
+                <input type="button" id="scissor" value="Scissor">
+            </p>
+
+            <p>
+                <input  id="obs" type="button" value="Reset">
+            </p>
+                
+            <div id="gamescoredisplay">
+                <h3>Game Score</h3>
+                
+                <p>Computer: <span id="computerscore">0</span> </p>
+                <p>Player: <span id="playerscore">0</span></p>
+
+            </div>
+
+        </div>
+ 
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
