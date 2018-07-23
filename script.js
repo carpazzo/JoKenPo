@@ -5,49 +5,55 @@
     Author: Dalton Ramiro
     date: 22/07/2018
     Language :html5, Javascript
-    Game Version = JokenPo v1.1
+    Game Version = JokenPo v 1.2
 
-    
     */
+
     var playerpick ="";
     var computerscore = 0;
     var playerscore = 0;
+    var finalscore = 10;
+    var gameon = ["Rock","Paper","Scissor"];
+    
+    var rock = 0;
+    var paper = 1;
+    var scissor = 2;
 
-    document.getElementById("stone").onclick = function()
+    
+
+    document.getElementById("rock").onclick = function()
     {   
-        var computerpick = Math.floor((Math.random())*4)
-        playerpick = 1;
+        computerpick = Math.floor((Math.random())*3)
+        playerpick = rock ;
         
-        if(computerpick == 2)
+        if(computerpick == paper)
         {
            
-            document.getElementById("resultdisplay").innerHTML = "Computer Score = Paper > Stone";
+            document.getElementById("resultdisplay").innerHTML = "Computer Score \n Paper > Rock";
             computerscore++
             document.getElementById("computerscore").innerHTML = computerscore;
             
         }
-        if(computerpick == 3)
+        if(computerpick == scissor)
         {
             
-            document.getElementById("resultdisplay").innerHTML ="Player Score = Stone > Scissor";
+            document.getElementById("resultdisplay").innerHTML ="Player Score \n Rock > Scissor";
             playerscore++
             document.getElementById("playerscore").innerHTML = playerscore;
         }
-        else if(computerpick == playerpick || computerpick == 0)
+        else if(computerpick == playerpick)
         {   
-           
-            computerpick = "Stone";
-            document.getElementById("resultdisplay").innerHTML ="Draw "+computerpick+" too!\n Nobody Score!" ;
+            document.getElementById("resultdisplay").innerHTML ="Draw "+gameon[0]+" too! \n Nobody Score!" ;
         }
-        if(playerscore == 10)
+        if(playerscore == finalscore)
         {   
-            document.getElementById("resultdisplay").innerHTML ="Player Win! ";
+            document.getElementById("resultdisplay").innerHTML = "Player Win! ";
             document.getElementById("btndisplay").style.display = "none"; 
             document.getElementById("obs").style.display= "block";
         }
-        if(computerscore == 10) 
+        if(computerscore == finalscore) 
         {
-            document.getElementById("resultdisplay").innerHTML ="Game Over\nComputer Win! ";
+            document.getElementById("resultdisplay").innerHTML ="Game Over \n Computer Win! ";
             document.getElementById("btndisplay").style.display = "none"; 
             document.getElementById("obs").style.display= "block";
         }
@@ -55,38 +61,36 @@
     }
     document.getElementById("paper").onclick = function()
     {
-        var computerpick = Math.floor((Math.random())*4)
-        playerpick = 2;
+        computerpick = Math.floor((Math.random())*3)
+        playerpick = paper ;
        
-        if(computerpick == 1)
+        if(computerpick == rock)
         {
             
-            document.getElementById("resultdisplay").innerHTML ="Player Score = Paper > Stone";
+            document.getElementById("resultdisplay").innerHTML ="Player Score \n Paper > Rock";
             playerscore++
             document.getElementById("playerscore").innerHTML= playerscore;
         }
-        if(computerpick == 3)
+        if(computerpick == scissor)
         {
             
-            document.getElementById("resultdisplay").innerHTML ="Computer Score = Scissor > Paper";
+            document.getElementById("resultdisplay").innerHTML ="Computer Score \n Scissor > Paper";
             computerscore++
             document.getElementById("computerscore").innerHTML= computerscore;
         }
-        else if(computerpick == playerpick || computerpick == 0)
+        else if(computerpick == playerpick)
         {   
-           
-            computerpick = "Paper";
-            document.getElementById("resultdisplay").innerHTML ="Draw "+computerpick+" too!\n Nobody Score!" ;
+            document.getElementById("resultdisplay").innerHTML ="Draw "+gameon[1]+" too! \n Nobody Score!" ;
         }
-        if(playerscore == 10)
+        if(playerscore == finalscore)
         {   
             document.getElementById("resultdisplay").innerHTML ="Player Win! ";
             document.getElementById("btndisplay").style.display = "none"; 
             document.getElementById("obs").style.display= "block"; 
         }
-        if(computerscore ==10) 
+        if(computerscore == finalscore) 
         {
-            document.getElementById("resultdisplay").innerHTML ="Game Over\nComputer Win! ";
+            document.getElementById("resultdisplay").innerHTML ="Game Over \n Computer Win! ";
             document.getElementById("btndisplay").style.display = "none"; 
             document.getElementById("obs").style.display= "block";
         }
@@ -94,44 +98,46 @@
     }
     document.getElementById("scissor").onclick = function()
     {
-        var computerpick = Math.floor((Math.random())*4)
-        playerpick = 3;
+        computerpick = Math.floor((Math.random())*3)
+        playerpick = scissor;
        
-        if(computerpick == 2)
+        if(computerpick == paper)
         {
             
-            document.getElementById("resultdisplay").innerHTML ="Player Score = Scissor > Paper";
+            document.getElementById("resultdisplay").innerHTML ="Player Score \n Scissor > Paper";
             playerscore++
             document.getElementById("playerscore").innerHTML= playerscore;
         }
-        if(computerpick == 1)
+        if(computerpick == rock)
         {
            
-            document.getElementById("resultdisplay").innerHTML ="Computer Score = Stone > Scissor ";
+            document.getElementById("resultdisplay").innerHTML ="Computer Score \n Rock > Scissor ";
             computerscore++
             document.getElementById("computerscore").innerHTML= computerscore;
         }
-        else if(computerpick == playerpick || computerpick == 0)
+        else if(computerpick == playerpick)
         {   
-            
-            computerpick = "Scissors";
-            document.getElementById("resultdisplay").innerHTML ="Draw "+computerpick+" too!\n Nobody Score!" ;
+            document.getElementById("resultdisplay").innerHTML ="Draw "+gameon[2]+" too! \n Nobody Score!" ;
         }
-        if(playerscore == 10)
+         if(playerscore == finalscore)
         {   
             document.getElementById("resultdisplay").innerHTML ="Player Win! ";
             document.getElementById("btndisplay").style.display = "none"; 
             document.getElementById("obs").style.display= "block"; 
         }
-        if(computerscore == 10) 
+        if(computerscore == finalscore) 
         {
-            document.getElementById("resultdisplay").innerHTML ="Game Over\nComputer Win! ";
+            document.getElementById("resultdisplay").innerHTML ="Game Over \n Computer Win! ";
             document.getElementById("btndisplay").style.display = "none"; 
             document.getElementById("obs").style.display= "block";
         }
-    }
 
+    
+    }
+   
     document.getElementById("obs").onclick= function()
     {
         location.reload();
     }    
+
+    
