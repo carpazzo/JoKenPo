@@ -11,7 +11,7 @@
 
 body
 {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(156, 156, 156);
     margin: 0px;
     padding: 0px;
 }
@@ -44,6 +44,7 @@ li
     background-color: rgb(0, 0, 0);
     border-radius: 2em;
     padding: 10px 0px 10px 0px;
+    margin: 50px 100px 50px 100px;
 
 }
 #gamedisplay
